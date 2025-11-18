@@ -13,11 +13,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-dom&zh^g6)px-qj#u9*s-g-72p#hq4mm)vm=6yv8!70ha*7vf_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
-
-
+DEBUG = True,
 # Application definition
 
 INSTALLED_APPS = [
@@ -124,3 +120,5 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+ALLOWED_HOSTS = ['*']  # o tu dominio de Render
+DEBUG = False  # cuando ya esté en producción
