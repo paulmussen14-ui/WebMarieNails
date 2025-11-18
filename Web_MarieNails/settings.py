@@ -11,9 +11,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-dom&zh^g6)px-qj#u9*s-g-72p#hq4mm)vm=6yv8!70ha*7vf_'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True,
+DEBUG = False  # cuando ya esté en producción
+ALLOWED_HOSTS = ['*']  # o tu dominio de Render
+# SECURITY WARNING: don't run with debug turned on in production
 # Application definition
 
 INSTALLED_APPS = [
@@ -84,10 +84,7 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
-]
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    BASE_DIR / "core/static",
+
 ]
 
 STATIC_URL = '/static/'
@@ -120,5 +117,5 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-ALLOWED_HOSTS = ['*']  # o tu dominio de Render
-DEBUG = False  # cuando ya esté en producción
+
+
