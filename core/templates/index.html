@@ -1,0 +1,296 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marie Nails | Reservas</title>
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <script src="{% static 'script.js' %}" defer></script>
+</head>
+
+<body class="body-public">
+    <!-- VIDEO DE FONDO GLOBAL -->
+    <video class="video-bg-global" autoplay muted loop playsinline>
+        <source src="{% static 'Video/FONDOWEB.mp4' %}" type="video/mp4">
+        Tu navegador no soporta video HTML5.
+    </video>
+
+    <!-- HEADER -->
+    <header class="public-header">
+    <div class="public-header__content">
+
+        <div class="header-left">
+            <div class="logo">
+            <img src="{% static 'img/generated_text (1).png' %}" 
+                        alt="Marie Nails" 
+                        class="logo__img">
+                <h2 class="logo__text"> </h2>
+            </div>
+
+            <p class="public-header__text">
+                            <!--Reserva tu cita por WhatsApp en pocos pasos -->
+            </p>
+        </div>
+
+        <div class="header-right">
+
+            <!-- INSTAGRAM -->
+            <a href="https://www.instagram.com/marie_nails__pe/" 
+                target="_blank" 
+                rel="noopener" 
+                class="social-btn social-btn--ig">
+                <img src="{% static 'ICONS/2.png' %}" alt="Instagram" class="social-icon">
+            </a>
+
+            <!-- TIKTOK -->
+            <a href="https://www.tiktok.com/@marienails05" 
+                target="_blank" 
+                rel="noopener" 
+                class="social-btn social-btn--tt">
+                
+                <img src="{% static 'ICONS/3.png' %}" alt="TikTok" class="social-icon">
+            </a>
+
+            <!-- WHATSAPP -->
+            <a href="https://wa.me/51954382592" 
+                target="_blank" 
+                rel="noopener" 
+                class="social-btn social-btn--wa">
+                <img src="{% static 'ICONS/1.png' %}" alt="WhatsApp" class="social-icon">
+            </a>
+
+        </div>
+
+    </div>
+</header>
+
+
+    <main class="public-main">
+        <!-- HERO -->
+        <section class="hero-public">
+            <div>
+                <h1>Reserva tu cita en Marie Nails</h1>
+                <p>Elige el servicio, la fecha y la hora. Nosotros recibimos tu solicitud directo en WhatsApp.</p>
+            </div>
+        </section>
+
+        <!-- VIDEO DESTACADO ENTRE HERO Y SERVICIOS -->
+        <section class="video-section">
+            <div class="video-section__inner">
+                <video class="video-section__video" autoplay muted loop playsinline>
+                    <source src="{% static 'Video/Diseño sin título.mp4' %}" type="video/mp4">
+                    Tu navegador no soporta video HTML5.
+                </video>
+                <div class="video-section__overlay">
+                    <h2>Descubre tus próximas uñas favoritas</h2>
+                    <p>Desliza hacia abajo, elige tu servicio y reserva tu cita en segundos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICIOS / CUADROS INTERACTIVOS -->
+        <section class="services-section">
+            <h2>Elige tu servicio</h2>
+            <p class="section__subtitle">Cada tarjeta permite reservar ese servicio con tu nombre, fecha y hora.</p>
+
+            <div class="services-grid">
+
+                <!-- Servicio 1 -->
+                <article class="service-card">
+                    <img src="{% static 'img/Clasica Semipermanente.jpg' %}"
+                        alt="Manicure clásica semipermanente - Marie Nails"
+                        class="service-card__img">
+
+                    <h3>Manicure clásica semipermanente</h3>
+                    <p class="service-card__desc">
+                        Limpieza, limado y esmaltado con un acabado elegante y duradero.
+                    </p>
+                    <p class="service-card__meta">
+                        <span>Duración aprox: 1 hora</span> · <span>Desde S/ 40.00</span>
+                    </p>
+
+                    <form class="service-form" data-servicio="Manicure clásica semipermanente">
+                        <div class="form-row">
+                            <input type="text" name="nombre" placeholder="Tu nombre" required>
+                            <input type="tel" name="telefono" placeholder="Tu WhatsApp" required>
+                        </div>
+                        <div class="form-row">
+                            <input type="date" name="fecha" required>
+                            <input type="time" name="hora" required>
+                        </div>
+                        <textarea name="nota" rows="2" placeholder="Nota adicional (opcional)"></textarea>
+
+                        <button type="submit" class="btn btn--primary btn--full">
+                            Reservar este servicio por WhatsApp
+                        </button>
+                    </form>
+                </article>
+
+                <!-- Servicio 2 -->
+                <article class="service-card">
+                    <img src="{% static 'img/Uñas Acrilicas.jpg' %}"
+                        alt="Uñas acrílicas - Marie Nails"
+                        class="service-card__img">
+
+                    <h3>Uñas acrílicas</h3>
+                    <p class="service-card__desc">
+                        Extensiones resistentes y personalizadas según el estilo que prefieras.
+                    </p>
+                    <p class="service-card__meta">
+                        <span>Duración aprox: 2 horas</span> · <span>Desde S/ 60.00</span>
+                    </p>
+
+                    <form class="service-form" data-servicio="Uñas acrílicas">
+                        <div class="form-row">
+                            <input type="text" name="nombre" placeholder="Tu nombre" required>
+                            <input type="tel" name="telefono" placeholder="Tu WhatsApp" required>
+                        </div>
+                        <div class="form-row">
+                            <input type="date" name="fecha" required>
+                            <input type="time" name="hora" required>
+                        </div>
+                        <textarea name="nota" rows="2" placeholder="Nota adicional (opcional)"></textarea>
+
+                        <button type="submit" class="btn btn--primary btn--full">
+                            Reservar este servicio por WhatsApp
+                        </button>
+                    </form>
+                </article>
+
+                <!-- Servicio 3 -->
+                <article class="service-card">
+                    <img src="{% static 'img/Rubber.jpg' %}"
+                        alt="Manicure Rubber - Marie Nails"
+                        class="service-card__img">
+
+                    <h3>Manicure Rubber</h3>
+                    <p class="service-card__desc">
+                        Refuerzo delicado para uñas naturales con acabado resistente y elegante.
+                    </p>
+                    <p class="service-card__meta">
+                        <span>Duración aprox: 2 horas</span> · <span>Desde S/ 50.00</span>
+                    </p>
+
+                    <form class="service-form" data-servicio="Manicure Rubber">
+                        <div class="form-row">
+                            <input type="text" name="nombre" placeholder="Tu nombre" required>
+                            <input type="tel" name="telefono" placeholder="Tu WhatsApp" required>
+                        </div>
+                        <div class="form-row">
+                            <input type="date" name="fecha" required>
+                            <input type="time" name="hora" required>
+                        </div>
+                        <textarea name="nota" rows="2" placeholder="Nota adicional (opcional)"></textarea>
+
+                        <button type="submit" class="btn btn--primary btn--full">
+                            Reservar este servicio por WhatsApp
+                        </button>
+                    </form>
+                </article>
+
+                <!-- Servicio 4 -->
+                <article class="service-card">
+                    <img src="{% static 'img/soft gel.jpg' %}"
+                        alt="System Soft Gel - Marie Nails"
+                        class="service-card__img">
+
+                    <h3>System Soft Gel</h3>
+                    <p class="service-card__desc">
+                        Acabado natural con la durabilidad perfecta para tu día a día.
+                    </p>
+                    <p class="service-card__meta">
+                        <span>Duración aprox: 1 h 30 min</span> · <span>S/ 55.00</span>
+                    </p>
+
+                    <form class="service-form" data-servicio="System Soft Gel">
+                        <div class="form-row">
+                            <input type="text" name="nombre" placeholder="Tu nombre" required>
+                            <input type="tel" name="telefono" placeholder="Tu WhatsApp" required>
+                        </div>
+                        <div class="form-row">
+                            <input type="date" name="fecha" required>
+                            <input type="time" name="hora" required>
+                        </div>
+                        <textarea name="nota" rows="2" placeholder="Nota adicional (opcional)"></textarea>
+
+                        <button type="submit" class="btn btn--primary btn--full">
+                            Reservar este servicio por WhatsApp
+                        </button>
+                    </form>
+                </article>
+
+                <!-- Servicio 5 -->
+                <article class="service-card">
+                    <img src="{% static 'img/essculpidas.jpg' %}"
+                        alt="Esculpidas - Marie Nails"
+                        class="service-card__img">
+
+                    <h3>Esculpidas</h3>
+                    <p class="service-card__desc">
+                        Uñas esculpidas a medida, con la forma y largo que siempre soñaste.
+                    </p>
+                    <p class="service-card__meta">
+                        <span>Duración aprox: 2 horas</span> · <span>S/ 70.00</span>
+                    </p>
+
+                    <form class="service-form" data-servicio="Esculpidas">
+                        <div class="form-row">
+                            <input type="text" name="nombre" placeholder="Tu nombre" required>
+                            <input type="tel" name="telefono" placeholder="Tu WhatsApp" required>
+                        </div>
+                        <div class="form-row">
+                            <input type="date" name="fecha" required>
+                            <input type="time" name="hora" required>
+                        </div>
+                        <textarea name="nota" rows="2" placeholder="Nota adicional (opcional)"></textarea>
+
+                        <button type="submit" class="btn btn--primary btn--full">
+                            Reservar este servicio por WhatsApp
+                        </button>
+                    </form>
+                </article>
+
+                <!-- Servicio 6 -->
+                <article class="service-card">
+                    <img src="{% static 'img/poly gel.jpg' %}"
+                        alt="Poly Gel - Marie Nails"
+                        class="service-card__img">
+
+                    <h3>Poly Gel</h3>
+                    <p class="service-card__desc">
+                        Fuerza de acrílico con ligereza de gel: uñas resistentes y flexibles.
+                    </p>
+                    <p class="service-card__meta">
+                        <span>Duración aprox: 2 horas</span> · <span>S/ 70.00</span>
+                    </p>
+
+                    <form class="service-form" data-servicio="Poly Gel">
+                        <div class="form-row">
+                            <input type="text" name="nombre" placeholder="Tu nombre" required>
+                            <input type="tel" name="telefono" placeholder="Tu WhatsApp" required>
+                        </div>
+                        <div class="form-row">
+                            <input type="date" name="fecha" required>
+                            <input type="time" name="hora" required>
+                        </div>
+                        <textarea name="nota" rows="2" placeholder="Nota adicional (opcional)"></textarea>
+
+                        <button type="submit" class="btn btn--primary btn--full">
+                            Reservar este servicio por WhatsApp
+                        </button>
+                    </form>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="public-footer">
+        <p>© {{ now|date:"Y" }} Marie Nails. Reservas por WhatsApp.</p>
+    </footer>
+
+</body>
+</html>
