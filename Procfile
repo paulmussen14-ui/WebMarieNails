@@ -1,1 +1,1 @@
-web_ gunicorn Web_MarieNails.wsgi:application
+web: gunicorn Web_MarieNails.wsgi:application
